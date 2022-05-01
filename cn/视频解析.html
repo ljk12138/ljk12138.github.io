@@ -47,7 +47,7 @@
     <div class="container">
         <div class="header h1 text-center">
             <h1>全网VIP视频解析</h1>
-            <small>选取解析API并输入视频地址即可免VIP播放</small>
+            <small>选择解析API并输入视频地址即可免VIP播放(油猴插件里的解析插件同理)</small>
         </div>
         <hr />
         <div class="main">
@@ -87,8 +87,7 @@ https://www.xymav.com/?url=
 https://vip.bljiex.com/?v=
 https://jx.parwix.com:4433/player/?url=
 https://www.mtosz.com/m3u8.php?url=
-https://www.murl.us/?url=tempquery
-</textarea>
+https://www.murl.us/?url=tempquery</textarea>
                         <!-- data-url="https://okjx.cc/?url=tempquery" ①</li>
  data-url="https://www.xymav.com/?url=tempquery" ②</li>
  data-url="https://vip.bljiex.com/?v=tempquery" ③</li>
@@ -113,11 +112,35 @@ https://www.murl.us/?url=tempquery
                 </div>
             </div>
         </div>
-        <div class="footer text-center">
-            <p>技术支持：<a href="https://ljk12138.github.io/" target="_blank">LJK</a></p>
-        </div>
-    </div>
 
+        <!-- Main Footer -->
+        <footer class="main-footer sticky footer-type-1 fixed">
+            <div class="footer-inner">
+                <div class="footer-text">
+                    &copy; 2022 - 2022
+                    <a href="../cn/about.html"><strong></strong></a> design by <a href="http://ljk12138.github.io"
+                        target="_blank"><strong>ljk</strong></a>
+                </div>
+                <div class="go-up">
+                    <a href="index.html" rel="go-top">返回导航
+                        <i class="fa-angle-left"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Bottom Scripts -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/resizeable.js"></script>
+    <script src="assets/js/joinable.js"></script>
+    <script src="assets/js/xenon-api.js"></script>
+    <script src="assets/js/xenon-toggles.js"></script>
+    <!-- JavaScripts initializations and stuff -->
+    <script src="assets/js/xenon-custom.js"></script>
+    <textarea tabindex="-1"
+        style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arimo, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing:0px; text-indent: 0px; line-height: 18.5714px; width: 53px;"
+        class="autosizejs" id="autosizejs"></textarea>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
@@ -143,7 +166,7 @@ https://www.murl.us/?url=tempquery
                 return;
             }
             if ($url == "" || $url == null || !/^http.*=$/.test($api)) {
-                alert('无效API！');
+                alert('无效API!');
                 return;
             }
             window.open($api + $url);
