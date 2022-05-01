@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>全网VIP视频解析-</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ljk" />
+
+    <meta name="keywords" content="网址导航,创意导航,创意网站导航,网址大全,游戏网址导航">
+    <meta name="description" content="收集国内外优秀网站、资源网站、创意网站、游戏网站，定时更新分享优质内容。ljk12138.github.io">
+    <link rel="shortcut icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
+    <link rel="stylesheet" href="../assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="../assets/css/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/xenon-core.css">
+    <link rel="stylesheet" href="../assets/css/xenon-components.css">
+    <link rel="stylesheet" href="../assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <script src="../assets/js/jquery-1.11.1.min.js"></script>
+    <link rel="icon" href="../assets/images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        .header {
+            margin-top: 10%;
+        }
+
+        .main {
+            padding: 10px 15%;
+        }
+
+        .footer {
+            padding: 10px 15%;
+        }
+    </style>
+
+<body>
+    <div class="container">
+        <div class="header h1 text-center">
+            <h1>全网VIP视频解析</h1>
+            <small>选取解析API并输入视频地址即可免VIP播放</small>
+        </div>
+        <hr />
+        <div class="main">
+            <form class="form-horizontal" method="post">
+                <div class="form-group">
+                    <label for="api" class="col-sm-2 control-label">API地址选择</label>
+                    <div class="col-sm-10">
+                        <select id="api" name="api" class="form-control"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="url" class="col-sm-2 control-label">视频地址</label>
+                    <div class="col-sm-10">
+                        <input type="url" class="form-control" id="url" name="url" placeholder="视频地址">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" id="play" class="btn btn-primary">解 析</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr />
+
+        <div class="main">
+            <h4>如播放地址失效，可重新设置API列表。
+                <!-- <a href="https://bak.yantuz.cn:8000/466.html" target="_blank">API获取</a>/<a
+                    href="javascript:setDefault();">恢复默认</a> -->
+            </h4>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="url" class="col-sm-2 control-label">API列表</label>
+                    <div class="col-sm-10">
+                        <textarea rows="10" id="apiList" class="form-control">https://okjx.cc/?url=
+https://www.xymav.com/?url=
+https://vip.bljiex.com/?v=
+https://jx.parwix.com:4433/player/?url=
+https://www.mtosz.com/m3u8.php?url=
+https://www.murl.us/?url=tempquery
+</textarea>
+                        <!-- data-url="https://okjx.cc/?url=tempquery" ①</li>
+ data-url="https://www.xymav.com/?url=tempquery" ②</li>
+ data-url="https://vip.bljiex.com/?v=tempquery" ③</li>
+ data-url="https://jx.parwix.com:4433/player/?url=tempquery" ④</li>
+ data-url="https://www.mtosz.com/m3u8.php?url=tempquery" ⑤</li>
+ data-url="https://www.murl.us/?url=tempquery" ⑥</li>
+ data-url="https://www.qianyicp.com/jiexi/?url=tempquery" ⑦</li>
+ data-url="https://www.ckmov.vip/api.php?url=tempquery" ⑧</li>
+ data-url="https://www.kpezp.cn/jlexi.php?url=tempquery" ⑨</li>
+ data-url="https://api.v6.chat/?url=tempquery" ⑩</li>
+ data-url="http://jx.yparse.com/?url=tempquery" ⑪</li>
+ data-url="https://jx.ergan.top/?url=tempquery" ⑫</li>
+ data-url="https://www.administratorw.com/video.php?url=tempquery" ⑬</li>
+ data-url="https://www.8090g.cn/?url=tempquery" ⑭</li>
+ data-url="https://www.8090g.cn/jiexi/?url=tempquery" ⑮</li>
+ data-url="https://jx.m3u8.tv/jiexi/?url=tempquery" ⑯</li>
+ data-url="https://2.08bk.com/?url=tempquery" ⑰</li>
+ data-url="https://api.v6.chat/?url=tempquery" ⑱</li>
+ data-url="https://z1.m1907.cn/?jx=tempquery" ⑲</li>
+ data-url="https://v.znb.me/?url=tempquery" ⑳</li> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer text-center">
+            <p>技术支持：<a href="https://ljk12138.github.io/" target="_blank">LJK</a></p>
+        </div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script>
+        function setApi() {
+            $("#api").children().remove();
+            var apilist = $("#apiList").val().split(/\r?\n/);
+            for (var i = 0; i < apilist.length; i++) {
+                $("#api").append("<option>" + apilist[i] + "</option>");
+            }
+        }
+        $("#apiList").blur(function () {
+            setApi();
+            $.cookie("apiList", $("#apiList").val());
+        });
+        $("#play").click(function () {
+            $api = $("#api").val();
+            $url = $("#url").val();
+            if ($url == "" || $url == null || !/^http.*$/.test($url)) {
+                alert('视频地址不正确！');
+                return;
+            }
+            if ($url == "" || $url == null || !/^http.*=$/.test($api)) {
+                alert('无效API！');
+                return;
+            }
+            window.open($api + $url);
+        });
+        function init() {
+            var ckapi = $.cookie("apiList");
+            if (ckapi && ckapi != "") {
+                $("#apiList").val(ckapi);
+            }
+            setApi();
+        }
+        init();
+        function setDefault() {
+            $.cookie("apiList", "");
+            window.location.reload();
+        }
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?65e1c6689693082cffb3b7e1f2d8027f";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+
+</html>
